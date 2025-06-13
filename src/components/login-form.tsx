@@ -21,7 +21,7 @@ export function LoginForm({
                 <div className="flex items-center justify-center mb-8 ">
                   <div className="bg-accent-foreground rounded-full p-4 border-2 border-primary relative z-10">
                     <Image
-                      src="/aeyes-logo.svg"
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/aeyes-logo.svg`}
                       alt="AEyes logo"
                       width={32}
                       height={32}
@@ -30,7 +30,7 @@ export function LoginForm({
                   </div>
                   <div className="absolute top-10 right-22">
                     <Image
-                      src="/arrow.svg"
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/arrow.svg`}
                       alt="Arrow decoration"
                       width={48}
                       height={48}
@@ -75,7 +75,7 @@ export function LoginForm({
           </form>
           <div className="bg-muted relative hidden md:block">
             <Image
-              src="/house-1.jpg"
+              src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
               alt="House exterior"
               fill
               className="object-cover"

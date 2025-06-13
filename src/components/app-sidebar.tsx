@@ -221,7 +221,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <a href="#" className="pt-2 block h-auto">
                 <div className="bg-primary rounded-lg p-4 flex items-center justify-center h-12 w-12">
                   <Image
-                    src="/aeyes-logo.svg"
+                    src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/aeyes-logo.svg`}
                     alt="AEyes logo"
                     width={20}
                     height={20}
