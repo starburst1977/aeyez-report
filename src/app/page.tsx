@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb"
-
+import Image from "next/image"
 import { FileText, BadgeCheck, CircleCheck, MoveRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -47,7 +47,14 @@ export default function Page() {
           <div className="grid grid-cols-3 gap-2">
             <div className="flex items-center gap-6 justify-start">
               <div className="flex items-center gap-2">
-                <div className="bg-[url(/user.jpg)] bg-cover bg-center rounded-lg size-16"></div>
+                <div className="relative rounded-lg size-16 overflow-hidden">
+                  <Image
+                    src="/user.jpg"
+                    alt="User profile"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
               <div className="">
                 <h1 className="text-lg font-bold text-primary h-[36px] flex items-center">Travis Page</h1>
@@ -84,9 +91,30 @@ export default function Page() {
           <div>
             <h3 className="text-lg font-medium text-secondary my-4">Pictures</h3>
             <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-              <div className="bg-[url(/house-1.jpg)] bg-cover bg-center bg-muted/50 aspect-video rounded-xl " />
-              <div className="bg-[url(/house-2.jpg)] bg-cover bg-center bg-muted/50 aspect-video rounded-xl " />
-              <div className="bg-[url(/house-3.jpg)] bg-cover bg-center bg-muted/50 aspect-video rounded-xl " />
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <Image
+                  src="/house-1.jpg"
+                  alt="House exterior"
+                  fill
+                  className="object-cover bg-muted/50"
+                />
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <Image
+                  src="/house-2.jpg"
+                  alt="House exterior"
+                  fill
+                  className="object-cover bg-muted/50"
+                />
+              </div>
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <Image
+                  src="/house-3.jpg"
+                  alt="House exterior"
+                  fill
+                  className="object-cover bg-muted/50"
+                />
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-3 gap-4">
@@ -174,7 +202,14 @@ export default function Page() {
                 <div className="grid grid-cols-4 gap-8">
                   <div>
                     <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
-                    <div className="bg-[url(/house-1.jpg)] bg-cover bg-center bg-muted/50 aspect-square rounded-lg " />
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                      <Image
+                        src="/house-1.jpg"
+                        alt="Defect photo"
+                        fill
+                        className="object-cover bg-muted/50"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
@@ -217,7 +252,14 @@ export default function Page() {
               <div className="grid grid-cols-4 gap-8">
                 <div>
                   <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
-                  <div className="bg-[url(/house-1.jpg)] bg-cover bg-center bg-muted/50 aspect-square rounded-lg " />
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/house-1.jpg"
+                      alt="Defect photo"
+                      fill
+                      className="object-cover bg-muted/50"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
@@ -242,7 +284,14 @@ export default function Page() {
               <div className="grid grid-cols-4 gap-8">
                 <div>
                   <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
-                  <div className="bg-[url(/house-1.jpg)] bg-cover bg-center bg-muted/50 aspect-square rounded-lg " />
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/house-1.jpg"
+                      alt="Defect photo"
+                      fill
+                      className="object-cover bg-muted/50"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
@@ -266,7 +315,14 @@ export default function Page() {
               <div className="grid grid-cols-4 gap-8">
                 <div>
                   <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
-                  <div className="bg-[url(/house-1.jpg)] bg-cover bg-center bg-muted/50 aspect-square rounded-lg " />
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src="/house-1.jpg"
+                      alt="Defect photo"
+                      fill
+                      className="object-cover bg-muted/50"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
@@ -343,7 +399,14 @@ export default function Page() {
                 <div className="grid grid-cols-4 gap-8">
                   <div>
                     <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
-                    <div className="bg-[url(/house-1.jpg)] bg-cover bg-center bg-muted/50 aspect-square rounded-lg " />
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                      <Image
+                        src="/house-1.jpg"
+                        alt="Defect photo"
+                        fill
+                        className="object-cover bg-muted/50"
+                      />
+                    </div>
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-muted pb-2">Description</h4>

@@ -1,4 +1,5 @@
 import * as React from "react"
+import Image from "next/image"
 
 import {
   Sidebar,
@@ -218,7 +219,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <a href="#" className="pt-2 block h-auto">
-                <div className="bg-primary rounded-lg p-4 flex items-center justify-center bg-[url(/aeyes-logo.svg)] bg-size-[20px] bg-no-repeat bg-center h-12 w-12">
+                <div className="bg-primary rounded-lg p-4 flex items-center justify-center h-12 w-12">
+                  <Image
+                    src="/aeyes-logo.svg"
+                    alt="AEyes logo"
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="flex flex-col leading-none pl-2">
                   <span className="font-medium text-primary text-lg">525 S State St</span>
