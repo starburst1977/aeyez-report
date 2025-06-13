@@ -49,7 +49,7 @@ export default function Page() {
               <div className="flex items-center gap-2">
                 <div className="relative rounded-lg size-16 overflow-hidden">
                   <Image
-                    src="/user.jpg"
+                    src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/user.jpg`}
                     alt="User profile"
                     fill
                     className="object-cover"
@@ -93,7 +93,7 @@ export default function Page() {
             <div className="grid auto-rows-min gap-4 md:grid-cols-3">
               <div className="relative aspect-video rounded-xl overflow-hidden">
                 <Image
-                  src="/house-1.jpg"
+                  src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-1.jpg`}
                   alt="House exterior"
                   fill
                   className="object-cover bg-muted/50"
@@ -101,7 +101,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video rounded-xl overflow-hidden">
                 <Image
-                  src="/house-2.jpg"
+                  src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-2.jpg`}
                   alt="House exterior"
                   fill
                   className="object-cover bg-muted/50"
@@ -109,7 +109,7 @@ export default function Page() {
               </div>
               <div className="relative aspect-video rounded-xl overflow-hidden">
                 <Image
-                  src="/house-3.jpg"
+                  src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-3.jpg`}
                   alt="House exterior"
                   fill
                   className="object-cover bg-muted/50"
@@ -204,7 +204,7 @@ export default function Page() {
                     <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
                     <div className="relative aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/house-1.jpg"
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-1.jpg`}
                         alt="Defect photo"
                         fill
                         className="object-cover bg-muted/50"
@@ -254,7 +254,7 @@ export default function Page() {
                   <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/house-1.jpg"
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-1.jpg`}
                       alt="Defect photo"
                       fill
                       className="object-cover bg-muted/50"
@@ -286,7 +286,7 @@ export default function Page() {
                   <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/house-1.jpg"
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-1.jpg`}
                       alt="Defect photo"
                       fill
                       className="object-cover bg-muted/50"
@@ -317,7 +317,7 @@ export default function Page() {
                   <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src="/house-1.jpg"
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-1.jpg`}
                       alt="Defect photo"
                       fill
                       className="object-cover bg-muted/50"
@@ -401,7 +401,7 @@ export default function Page() {
                     <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
                     <div className="relative aspect-square rounded-lg overflow-hidden">
                       <Image
-                        src="/house-1.jpg"
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyes-report' : ''}/house-1.jpg`}
                         alt="Defect photo"
                         fill
                         className="object-cover bg-muted/50"
