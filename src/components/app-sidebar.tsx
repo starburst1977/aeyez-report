@@ -1,5 +1,4 @@
 import * as React from "react"
-import { GalleryVerticalEnd } from "lucide-react"
 
 import {
   Sidebar,
@@ -11,7 +10,6 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarMenuSubButton,
-  SidebarMenuBadge,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
