@@ -78,7 +78,7 @@ export function LoginForm({
               src="/house-1.jpg"
               alt="House exterior"
               fill
-              className="object-cover dark:brightness-[0.2] dark:grayscale"
+              className="object-cover"
             />
           </div>
         </CardContent>
