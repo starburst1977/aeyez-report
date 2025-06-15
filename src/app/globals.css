@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+@theme static {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -55,7 +55,7 @@
   --primary-foreground:#0C0D2B;
   --secondary: #C5B8AB;
   --secondary-foreground: #F1EFEC;
-  --muted: #9b9085;
+  --muted: #887e74;
   --muted-foreground: #c0b7ad;
   --accent: #5D95D3;
   --accent-foreground: #bdd4ec;

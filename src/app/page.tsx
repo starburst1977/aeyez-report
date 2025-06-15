@@ -165,26 +165,72 @@ export default function Page() {
           </div>
           
           <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2">Exterior Inspection</h2>
+          <div className="grid grid-cols-3 gap-4">
+              <h3 className="text-lg font-medium text-secondary">Homeowner's Responsibility</h3>
+              <p className="text-xs text-muted">The exterior of your home is slowly deteriorating and aging. The sun, wind, rain and temperatures are constantly affecting it. Your job is to monitor the buildings exterior for its condition and weathertightness. <br/><br/>Check the condition of all exterior materials and look for developing patterns of damage or deterioration. </p>
+              <p className="text-xs text-muted">During a heavy rainstorm (without lightning), grab an umbrella and go outside. Walk around your house and look around at the roof and property. A rainstorm is the perfect time to see how the roof, downspouts and grading are performing. Observe the drainage patterns of your entire property, as well as the property of your neighbor. The ground around your house should slope away from all sides. Downspouts, surface gutters and drains should be directing water away from the foundation. </p>
+          </div>
           <div>
             <div className="flex flex-col gap-2">
               <h3 className="text-lg font-medium text-secondary py-4">Systems Check</h3>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  General
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                Exterior Structure
+                <p className="text-sm text-muted">I inspected the exterior of the house.</p>
               </div>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Exterior Doors and Windows
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                Roof System
+                <p className="text-sm text-muted">I inspected the exterior doors.</p>
               </div>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Eaves, Soffits & Fascia
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                Exterior Doors and Windows
+                <div className="flex gap-4">
+                  <div className="relative aspect-square rounded-lg overflow-hidden w-48">
+                    <Image
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-4.jpg`}
+                      alt="Defect photo"
+                      fill
+                      className="object-cover bg-muted/50"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    <div className="text-sm text-muted">I inspected the eaves, soffits and fascia.  I was not able to inspect every detail, since a home inspection is limited in its scope.</div>
+                    <div className="text-sm text-muted"><b>Limitation:</b> I did not inspect all of the eaves, soffit, and facia.  It's impossible to inspect those areas closely during a home inspection.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the eaves, soffit, and fascia.</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Wall-Covering, Flashing & Trim
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
+                </div>
+                <div className="flex gap-4">
+                  <div className="relative aspect-square rounded-lg overflow-hidden w-48">
+                    <Image
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-5.jpg`}
+                      alt="Defect photo"
+                      fill
+                      className="object-cover bg-muted/50"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    <div className="text-sm text-muted">The exterior of your home is slowly deteriorating and aging.  The sun, wind, rain and temperatures are constantly affecting it.  Your job is to monitor the house's exterior for its condition and weathertightness. </div>
+                    <div className="text-sm text-muted"><b>Limitation:</b> I did not inspect all of the exterior wall-covering material.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the exterior wall-covering.</div>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -193,15 +239,15 @@ export default function Page() {
           <div className="">
             <div>
               <h3 className="text-lg font-medium text-secondary my-4">Defects</h3>
-              <div className="bg-secondary/25 rounded-lg px-8 pt-6 pb-8">
+              <div className="bg-blue-300/25 rounded-lg px-8 pt-6 pb-8">
                 <div className="flex items-center gap-4 pb-4">
                   <h5 className="text-base text-primary">Site and Grounds</h5>
                   <MoveRight className="w-4 h-4 text-primary" />
-                  <h3 className="text-base font-medium text-red-800">Retaining Walls</h3>
+                  <h3 className="text-base font-bold text-blue-800">Retaining Walls</h3>
                 </div>
                 <div className="grid grid-cols-4 gap-8">
                   <div>
-                    <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
+                    <h4 className="text-sm font-light text-blue-800/60 pb-3">Picture</h4>
                     <div className="relative aspect-square rounded-lg overflow-hidden">
                       <Image
                         src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
@@ -212,15 +258,22 @@ export default function Page() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
+                    
+                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Description</h4>
                     <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-muted pb-2">Likely Cause</h4>
+                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Likely Cause</h4>
                     <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-muted pb-2">Recommendations</h4>
+                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Severity</h4>
+                    <div className="pb-4">
+                      <div className="inline-flex items-center gap-2 bg-blue-800 rounded-lg py-2 px-4 text-sm text-white">
+                        Minor Defect / Maintenance
+                      </div>
+                    </div>
+                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Recommendations</h4>
                     <p>Description text about something on this page that can be long or short. </p>
                   </div>
                 </div>
@@ -234,7 +287,7 @@ export default function Page() {
               <h3 className="text-lg font-medium text-secondary my-4">Systems Check</h3>
               <div className="flex items-center gap-4 text-primary">
                 <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
                 </div>
                 Interior Walls, Ceilings, and Floors
               </div>
@@ -243,15 +296,15 @@ export default function Page() {
           </div>
           <h3 className="text-lg font-medium text-secondary mt-4">Defects</h3>
           <div className="flex flex-col gap-4">
-            <div className="bg-secondary/25 rounded-lg px-8 pt-6 pb-8">
+            <div className="bg-yellow-300/25 rounded-lg px-8 pt-6 pb-8">
               <div className="flex items-center gap-4 pb-4">
-                <h5 className="text-base text-primary">Doors and Windows</h5>
-                <MoveRight className="w-4 h-4 text-primary" />
-                <h3 className="text-base font-medium text-red-800">Retaining Walls</h3>
+                <h5 className="text-base text-yellow-800">Doors and Windows</h5>
+                <MoveRight className="w-4 h-4 text-yellow-800" />
+                <h3 className="text-base font-bold text-yellow-800">Retaining Walls</h3>
               </div>
               <div className="grid grid-cols-4 gap-8">
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-3">Picture</h4>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
                       src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
@@ -262,28 +315,34 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Description</h4>
                   <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Likely Cause</h4>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Likely Cause</h4>
                   <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Recommendations</h4>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Severity</h4>
+                  <div className="pb-4">
+                    <div className="inline-flex items-center gap-2 bg-yellow-800 rounded-lg py-2 px-4 text-sm text-white">
+                      Marginal Defects
+                    </div>
+                  </div>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Recommendations</h4>
                   <p>Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
                 </div>
               </div>
             </div>
-            <div className="bg-secondary/25 rounded-lg px-8 pt-6 pb-8">
+            <div className="bg-red-300/25 rounded-lg px-8 pt-6 pb-8">
               <div className="flex items-center gap-4 pb-4">
-                <h5 className="text-base text-primary">Doors and Windows</h5>
-                <MoveRight className="w-4 h-4 text-primary" />
-                <h3 className="text-base font-medium text-red-800">Retaining Walls</h3>
+                <h5 className="text-base text-red-800">Doors and Windows</h5>
+                <MoveRight className="w-4 h-4 text-red-800" />
+                <h3 className="text-base font-bold text-red-800">Retaining Walls</h3>
               </div>
               <div className="grid grid-cols-4 gap-8">
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
+                  <h4 className="text-sm font-light text-red-800/60 pb-3">Picture</h4>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
                       src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
@@ -294,27 +353,34 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
+                  <h4 className="text-sm font-light text-red-800/60 pb-2">Description</h4>
                   <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Likely Cause</h4>
+                  <h4 className="text-sm font-light text-red-800/60 pb-2">Likely Cause</h4>
                   <p>Description text about something on this page that can be long or short. </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Recommendations</h4>
+                  <h4 className="text-sm font-light text-red-800/60 pb-2">Severity</h4>
+                  <div className="pb-4">
+                    <div className="inline-flex items-center gap-2 bg-red-800 rounded-lg py-2 px-4 text-sm text-white">
+                      Significant / Major Defects
+                    </div>
+                  </div>
+                  <h4 className="text-sm font-light text-red-800/60 pb-2">Recommendations</h4>
                   <p>Description text about something on this page that can be long or short.</p>
                 </div>
               </div>
-            </div><div className="bg-secondary/25 rounded-lg px-8 pt-6 pb-8">
+            </div>
+            <div className="bg-yellow-300/25 rounded-lg px-8 pt-6 pb-8">
               <div className="flex items-center gap-4 pb-4">
-                <h5 className="text-base text-primary">Doors and Windows</h5>
-                <MoveRight className="w-4 h-4 text-primary" />
-                <h3 className="text-base font-medium text-red-800">Retaining Walls</h3>
+                <h5 className="text-base text-yellow-800">Doors and Windows</h5>
+                <MoveRight className="w-4 h-4 text-yellow-800" />
+                <h3 className="text-base font-bold text-yellow-800">Retaining Walls</h3>
               </div>
               <div className="grid grid-cols-4 gap-8">
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-3">Picture</h4>
                   <div className="relative aspect-square rounded-lg overflow-hidden">
                     <Image
                       src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
@@ -325,15 +391,21 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Description</h4>
                   <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Likely Cause</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Likely Cause</h4>
+                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted pb-2">Recommendations</h4>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Severity</h4>
+                  <div className="pb-4">
+                    <div className="inline-flex items-center gap-2 bg-yellow-800 rounded-lg py-2 px-4 text-sm text-white">
+                      Marginal Defects
+                    </div>
+                  </div>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Recommendations</h4>
                   <p>Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
                 </div>
               </div>
@@ -347,19 +419,19 @@ export default function Page() {
               <h3 className="text-lg font-medium text-secondary py-4">Systems Check</h3>
               <div className="flex items-center gap-4 text-primary">
                 <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
                 </div>
                 Foundation
               </div>
               <div className="flex items-center gap-4 text-primary">
                 <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
                 </div>
                 Basement and Crawlspace
               </div>
               <div className="flex items-center gap-4 text-primary">
                 <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
                 </div>
                 Attic and Roof Framing
               </div>
@@ -373,13 +445,13 @@ export default function Page() {
               <h3 className="text-lg font-medium text-secondary py-4">Systems Check</h3>
               <div className="flex items-center gap-4 text-primary">
                 <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
                 </div>
                 Service Entrance and Panels
               </div>
               <div className="flex items-center gap-4 text-primary">
                 <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Checked
+                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
                 </div>
                 Branch Circuits, Connected Devices and Fixtures
               </div>
@@ -390,38 +462,44 @@ export default function Page() {
           <div className="">
             <div>
               <h3 className="text-lg font-medium text-secondary my-4">Defects</h3>
-              <div className="bg-secondary/25 rounded-lg px-8 pt-6 pb-8">
-                <div className="flex items-center gap-4 pb-4">
-                  <h5 className="text-base text-primary">Site and Grounds</h5>
-                  <MoveRight className="w-4 h-4 text-primary" />
-                  <h3 className="text-base font-medium text-red-800">Retaining Walls</h3>
+              <div className="bg-yellow-300/25 rounded-lg px-8 pt-6 pb-8">
+              <div className="flex items-center gap-4 pb-4">
+                <h5 className="text-base text-yellow-800">Doors and Windows</h5>
+                <MoveRight className="w-4 h-4 text-yellow-800" />
+                <h3 className="text-base font-bold text-yellow-800">Retaining Walls</h3>
+              </div>
+              <div className="grid grid-cols-4 gap-8">
+                <div>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-3">Picture</h4>
+                  <div className="relative aspect-square rounded-lg overflow-hidden">
+                    <Image
+                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
+                      alt="Defect photo"
+                      fill
+                      className="object-cover bg-muted/50"
+                    />
+                  </div>
                 </div>
-                <div className="grid grid-cols-4 gap-8">
-                  <div>
-                    <h4 className="text-sm font-medium text-muted pb-3">Picture</h4>
-                    <div className="relative aspect-square rounded-lg overflow-hidden">
-                      <Image
-                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
-                        alt="Defect photo"
-                        fill
-                        className="object-cover bg-muted/50"
-                      />
+                <div>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Description</h4>
+                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Likely Cause</h4>
+                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Severity</h4>
+                  <div className="pb-4">
+                    <div className="inline-flex items-center gap-2 bg-yellow-800 rounded-lg py-2 px-4 text-sm text-white">
+                      Marginal Defects
                     </div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-muted pb-2">Description</h4>
-                    <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-muted pb-2">Likely Cause</h4>
-                    <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-muted pb-2">Recommendations</h4>
-                    <p>Description text about something on this page that can be long or short. </p>
-                  </div>
+                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Recommendations</h4>
+                  <p>Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
                 </div>
               </div>
+            </div>
             </div>
           </div>
           
