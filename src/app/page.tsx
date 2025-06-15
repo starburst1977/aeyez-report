@@ -166,7 +166,7 @@ export default function Page() {
           
           <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2">Exterior Inspection</h2>
           <div className="grid grid-cols-3 gap-4">
-              <h3 className="text-lg font-medium text-secondary">Homeowner's Responsibility</h3>
+              <h3 className="text-lg font-medium text-secondary">Homeowner&apos;s Responsibility</h3>
               <p className="text-xs text-muted">The exterior of your home is slowly deteriorating and aging. The sun, wind, rain and temperatures are constantly affecting it. Your job is to monitor the buildings exterior for its condition and weathertightness. <br/><br/>Check the condition of all exterior materials and look for developing patterns of damage or deterioration. </p>
               <p className="text-xs text-muted">During a heavy rainstorm (without lightning), grab an umbrella and go outside. Walk around your house and look around at the roof and property. A rainstorm is the perfect time to see how the roof, downspouts and grading are performing. Observe the drainage patterns of your entire property, as well as the property of your neighbor. The ground around your house should slope away from all sides. Downspouts, surface gutters and drains should be directing water away from the foundation. </p>
           </div>
@@ -206,7 +206,7 @@ export default function Page() {
                   </div>
                   <div className="flex flex-col gap-4">
                     <div className="text-sm text-muted">I inspected the eaves, soffits and fascia.  I was not able to inspect every detail, since a home inspection is limited in its scope.</div>
-                    <div className="text-sm text-muted"><b>Limitation:</b> I did not inspect all of the eaves, soffit, and facia.  It's impossible to inspect those areas closely during a home inspection.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the eaves, soffit, and fascia.</div>
+                    <div className="text-sm text-muted"><b>Limitation:</b> I did not inspect all of the eaves, soffit, and facia.  It&apos;s impossible to inspect those areas closely during a home inspection.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the eaves, soffit, and fascia.</div>
                   </div>
                 </div>
                 
@@ -227,7 +227,7 @@ export default function Page() {
                     />
                   </div>
                   <div className="flex flex-col gap-4">
-                    <div className="text-sm text-muted">The exterior of your home is slowly deteriorating and aging.  The sun, wind, rain and temperatures are constantly affecting it.  Your job is to monitor the house's exterior for its condition and weathertightness. </div>
+                    <div className="text-sm text-muted">The exterior of your home is slowly deteriorating and aging.  The sun, wind, rain and temperatures are constantly affecting it.  Your job is to monitor the house&apos;s exterior for its condition and weathertightness. </div>
                     <div className="text-sm text-muted"><b>Limitation:</b> I did not inspect all of the exterior wall-covering material.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the exterior wall-covering.</div>
                   </div>
                 </div>
