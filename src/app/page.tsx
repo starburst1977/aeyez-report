@@ -6,7 +6,7 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb"
 import Image from "next/image"
-import { FileText, BadgeCheck, MoveRight } from "lucide-react"
+import { FileText, MoveRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Select,
