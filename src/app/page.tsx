@@ -165,10 +165,12 @@ export default function Page() {
           </div>
           
           <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2">Exterior Inspection</h2>
-          <div className="grid grid-cols-3 gap-4">
-              <h3 className="text-lg font-medium text-secondary">Homeowner&apos;s Responsibility</h3>
-              <p className="text-xs text-muted">The exterior of your home is slowly deteriorating and aging. The sun, wind, rain and temperatures are constantly affecting it. Your job is to monitor the buildings exterior for its condition and weathertightness. <br/><br/>Check the condition of all exterior materials and look for developing patterns of damage or deterioration. </p>
-              <p className="text-xs text-muted">During a heavy rainstorm (without lightning), grab an umbrella and go outside. Walk around your house and look around at the roof and property. A rainstorm is the perfect time to see how the roof, downspouts and grading are performing. Observe the drainage patterns of your entire property, as well as the property of your neighbor. The ground around your house should slope away from all sides. Downspouts, surface gutters and drains should be directing water away from the foundation. </p>
+          <h3 className="text-lg font-medium text-secondary">Homeowner&apos;s Responsibility</h3>
+          <div className="grid grid-cols-3 gap-8">
+              
+              <p className="text-xs text-muted">The exterior of your home is slowly deteriorating and aging. The sun, wind, rain and temperatures are constantly affecting it. Your job is to monitor the buildings exterior for its condition and weathertightness. Check the condition of all exterior materials and look for developing patterns of damage or deterioration. </p>
+              <p className="text-xs text-muted">During a heavy rainstorm (without lightning), grab an umbrella and go outside. Walk around your house and look around at the roof and property. A rainstorm is the perfect time to see how the roof, downspouts and grading are performing. Observe the drainage patterns of your entire property, as well as the property of your neighbor. </p>
+              <p className="text-xs text-muted"> The ground around your house should slope away from all sides. Downspouts, surface gutters and drains should be directing water away from the foundation. </p>
           </div>
           <div>
             <div className="flex flex-col gap-2">
@@ -179,7 +181,7 @@ export default function Page() {
                   <MoveRight className="w-4 h-4 text-primary" />
                   <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                <p className="text-sm text-muted">I inspected the exterior of the house.</p>
+                <p className="text-base text-muted">I inspected the exterior of the house.</p>
               </div>
               <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
                 <div className="flex items-center gap-4 text-primary">
@@ -187,7 +189,7 @@ export default function Page() {
                   <MoveRight className="w-4 h-4 text-primary" />
                   <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                <p className="text-sm text-muted">I inspected the exterior doors.</p>
+                <p className="text-base text-muted">I inspected the exterior doors.</p>
               </div>
               <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
                 <div className="flex items-center gap-4 text-primary">
@@ -195,18 +197,21 @@ export default function Page() {
                   <MoveRight className="w-4 h-4 text-primary" />
                   <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                <div className="flex gap-4">
-                  <div className="relative aspect-square rounded-lg overflow-hidden w-48">
-                    <Image
-                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-4.jpg`}
-                      alt="Defect photo"
-                      fill
-                      className="object-cover bg-muted/50"
-                    />
-                  </div>
+                <div className="flex flex-col gap-4">
+                  
                   <div className="flex flex-col gap-4">
-                    <div className="text-sm text-muted">I inspected the eaves, soffits and fascia.  I was not able to inspect every detail, since a home inspection is limited in its scope.</div>
-                    <div className="text-sm text-muted"><b>Limitation:</b> I did not inspect all of the eaves, soffit, and facia.  It&apos;s impossible to inspect those areas closely during a home inspection.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the eaves, soffit, and fascia.</div>
+                    <div className="text-base text-muted">I inspected the eaves, soffits and fascia.  I was not able to inspect every detail, since a home inspection is limited in its scope.</div>
+                    <div className="text-base text-muted"><b>Limitation:</b> I did not inspect all of the eaves, soffit, and facia.  It&apos;s impossible to inspect those areas closely during a home inspection.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the eaves, soffit, and fascia.</div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-4.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
                 
@@ -217,18 +222,163 @@ export default function Page() {
                   <MoveRight className="w-4 h-4 text-primary" />
                   <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                <div className="flex gap-4">
-                  <div className="relative aspect-square rounded-lg overflow-hidden w-48">
-                    <Image
-                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-5.jpg`}
-                      alt="Defect photo"
-                      fill
-                      className="object-cover bg-muted/50"
-                    />
-                  </div>
+                <div className="flex flex-col gap-4">
+                  
                   <div className="flex flex-col gap-4">
-                    <div className="text-sm text-muted">The exterior of your home is slowly deteriorating and aging.  The sun, wind, rain and temperatures are constantly affecting it.  Your job is to monitor the house&apos;s exterior for its condition and weathertightness. </div>
-                    <div className="text-sm text-muted"><b>Limitation:</b> I did not inspect all of the exterior wall-covering material.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the exterior wall-covering.</div>
+                    <div className="text-base text-muted">The exterior of your home is slowly deteriorating and aging.  The sun, wind, rain and temperatures are constantly affecting it.  Your job is to monitor the house&apos;s exterior for its condition and weathertightness. </div>
+                    <div className="text-base text-muted"><b>Limitation:</b> I did not inspect all of the exterior wall-covering material.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the exterior wall-covering.</div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-5.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Vegetation, Surface Drainage, Retaining Walls & Grading
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col gap-4">
+                    <div className="text-base text-muted">I inspected the vegetation, surface drainage, retaining walls and grading of the property, where they may adversely affect the structure due to moisture intrusion. </div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-6.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-7.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-8.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  GFCIs & Electrical
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
+                </div>
+                <p className="text-base text-muted">I inspected ground-fault circuit interrupter receptacles and circuit breakers observed and deemed to be GFCIs using a GFCI tester, where possible.</p>
+                <div className="text-base text-muted"><b>Limitation:</b> I was unable to inspect every electrical component or proper installation of the GFCI system according to modern code. A licensed electrician or township building code inspector could perform that type of test, which is beyond the scope of my visual-only home inspection. I inspected the electrical system as much as I could according to the Home Inspection Standards of Practice.</div>
+              </div>
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                Walkways & Driveways
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col gap-4">
+                    <div className="text-base text-muted">I inspected the walkways and driveways that were adjacent to the house.  The walkways, driveways, and parking areas that were far away from the house foundation were not inspected. </div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-9.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-10.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-11.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Porches, Patios, Decks, Balconies & Carports
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col gap-4">
+                    <div className="text-base text-muted">I inspected the porches, patios, decks, balconies and carports at the house that were within the scope of the home inspection. </div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-12.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-13.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-14.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-15.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-16.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -237,44 +387,134 @@ export default function Page() {
             
           </div>
           <div className="">
-            <div>
+            <div className="flex flex-col gap-4">
               <h3 className="text-lg font-medium text-secondary my-4">Defects</h3>
-              <div className="bg-blue-300/25 rounded-lg px-8 pt-6 pb-8">
-                <div className="flex items-center gap-4 pb-4">
-                  <h5 className="text-base text-primary">Site and Grounds</h5>
+              <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Eaves, Soffits & Fascia
                   <MoveRight className="w-4 h-4 text-primary" />
-                  <h3 className="text-base font-bold text-blue-800">Retaining Walls</h3>
+                  <h3 className=" text-primary flex items-center gap-2 font-bold">Damage observed at fascia</h3>
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-blue-800 flex items-center gap-2 font-bold">Minor Defect / Maintenance</h3>
                 </div>
-                <div className="grid grid-cols-4 gap-8">
-                  <div>
-                    <h4 className="text-sm font-light text-blue-800/60 pb-3">Picture</h4>
-                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col">
+                    <h4 className="text-sm font-light text-blue-800/60 pt-2">Description</h4>
+                    <div className="text-base text-primary">I observed indications that one or more areas of the fascia were damaged. </div>
+                    <h4 className="text-sm font-light text-blue-800/60 pt-2">Recommendations</h4>
+                    <div className="text-base text-primary">Correction and further evaluation is recommended.</div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
                       <Image
-                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-17.jpg`}
                         alt="Defect photo"
                         fill
-                        className="object-cover bg-muted/50"
+                        className="object-cover"
                       />
                     </div>
                   </div>
-                  <div>
-                    
-                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Description</h4>
-                    <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.</p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Wall-Covering, Flashing & Trim
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-primary flex items-center gap-2 font-bold">Damaged trim</h3>
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-blue-800 flex items-center gap-2 font-bold">Minor Defect / Maintenance</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col">
+                    <h4 className="text-sm font-light text-blue-800/60 pt-2">Description</h4>
+                    <div className="text-base text-primary">I observed Damaged trim at the time of inspection. </div>
+                    <h4 className="text-sm font-light text-blue-800/60 pt-2">Recommendations</h4>
+                    <div className="text-base text-primary">Recommend repair.</div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Likely Cause</h4>
-                    <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Severity</h4>
-                    <div className="pb-4">
-                      <div className="inline-flex items-center gap-2 bg-blue-800 rounded-lg py-2 px-4 text-sm text-white">
-                        Minor Defect / Maintenance
-                      </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-18.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <h4 className="text-sm font-light text-blue-800/60 pb-2">Recommendations</h4>
-                    <p>Description text about something on this page that can be long or short. </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  GFCIs & Electrical
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-primary flex items-center gap-2 font-bold">No power present</h3>
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-red-800 flex items-center gap-2 font-bold">Major Defect</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col">
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Description</h4>
+                    <div className="text-base text-primary">At the time of inspection I observed no power present. Was unable to test GFCI.</div>
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Recommendations</h4>
+                    <div className="text-base text-primary">recommend evaluation or replacement of faulty GFCI.</div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-19.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-20.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-21.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Railings, Guards & Handrails
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-primary flex items-center gap-2 font-bold">Missing handrail</h3>
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-red-800 flex items-center gap-2 font-bold">Major Defect</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col">
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Description</h4>
+                    <div className="text-base text-primary">I observed a missing handrail. </div>
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Recommendations</h4>
+                    <div className="text-base text-primary">There is more than one step here, and I recommend installing a handrail for safety. </div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-22.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -285,223 +525,141 @@ export default function Page() {
           <div className="">
             <div>
               <h3 className="text-lg font-medium text-secondary my-4">Systems Check</h3>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Eaves, Soffits & Fascia
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
-                Interior Walls, Ceilings, and Floors
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col gap-4">
+                    <div className="text-base text-muted">I inspected the eaves, soffits and fascia.  I was not able to inspect every detail, since a home inspection is limited in its scope.</div>
+                    <div className="text-base text-muted"><b>Limitation:</b> I did not inspect all of the eaves, soffit, and facia.  It&apos;s impossible to inspect those areas closely during a home inspection.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the eaves, soffit, and fascia.</div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-4.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>
             
           </div>
           <h3 className="text-lg font-medium text-secondary mt-4">Defects</h3>
           <div className="flex flex-col gap-4">
-            <div className="bg-yellow-300/25 rounded-lg px-8 pt-6 pb-8">
-              <div className="flex items-center gap-4 pb-4">
-                <h5 className="text-base text-yellow-800">Doors and Windows</h5>
-                <MoveRight className="w-4 h-4 text-yellow-800" />
-                <h3 className="text-base font-bold text-yellow-800">Retaining Walls</h3>
-              </div>
-              <div className="grid grid-cols-4 gap-8">
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-3">Picture</h4>
-                  <div className="relative aspect-square rounded-lg overflow-hidden">
-                    <Image
-                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
-                      alt="Defect photo"
-                      fill
-                      className="object-cover bg-muted/50"
-                    />
+          <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Wall-Covering, Flashing & Trim
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-primary flex items-center gap-2 font-bold">Damaged trim</h3>
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-blue-800 flex items-center gap-2 font-bold">Minor Defect / Maintenance</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col">
+                    <h4 className="text-sm font-light text-blue-800/60 pt-2">Description</h4>
+                    <div className="text-base text-primary">I observed Damaged trim at the time of inspection. </div>
+                    <h4 className="text-sm font-light text-blue-800/60 pt-2">Recommendations</h4>
+                    <div className="text-base text-primary">Recommend repair.</div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Description</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Likely Cause</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Severity</h4>
-                  <div className="pb-4">
-                    <div className="inline-flex items-center gap-2 bg-yellow-800 rounded-lg py-2 px-4 text-sm text-white">
-                      Marginal Defects
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-18.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Recommendations</h4>
-                  <p>Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
                 </div>
               </div>
-            </div>
-            <div className="bg-red-300/25 rounded-lg px-8 pt-6 pb-8">
-              <div className="flex items-center gap-4 pb-4">
-                <h5 className="text-base text-red-800">Doors and Windows</h5>
-                <MoveRight className="w-4 h-4 text-red-800" />
-                <h3 className="text-base font-bold text-red-800">Retaining Walls</h3>
-              </div>
-              <div className="grid grid-cols-4 gap-8">
-                <div>
-                  <h4 className="text-sm font-light text-red-800/60 pb-3">Picture</h4>
-                  <div className="relative aspect-square rounded-lg overflow-hidden">
-                    <Image
-                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
-                      alt="Defect photo"
-                      fill
-                      className="object-cover bg-muted/50"
-                    />
+              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  GFCIs & Electrical
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-primary flex items-center gap-2 font-bold">No power present</h3>
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-red-800 flex items-center gap-2 font-bold">Major Defect</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col">
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Description</h4>
+                    <div className="text-base text-primary">At the time of inspection I observed no power present. Was unable to test GFCI.</div>
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Recommendations</h4>
+                    <div className="text-base text-primary">recommend evaluation or replacement of faulty GFCI.</div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-red-800/60 pb-2">Description</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-red-800/60 pb-2">Likely Cause</h4>
-                  <p>Description text about something on this page that can be long or short. </p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-red-800/60 pb-2">Severity</h4>
-                  <div className="pb-4">
-                    <div className="inline-flex items-center gap-2 bg-red-800 rounded-lg py-2 px-4 text-sm text-white">
-                      Significant / Major Defects
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-19.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-20.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-21.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </div>
-                  <h4 className="text-sm font-light text-red-800/60 pb-2">Recommendations</h4>
-                  <p>Description text about something on this page that can be long or short.</p>
                 </div>
               </div>
-            </div>
-            <div className="bg-yellow-300/25 rounded-lg px-8 pt-6 pb-8">
-              <div className="flex items-center gap-4 pb-4">
-                <h5 className="text-base text-yellow-800">Doors and Windows</h5>
-                <MoveRight className="w-4 h-4 text-yellow-800" />
-                <h3 className="text-base font-bold text-yellow-800">Retaining Walls</h3>
-              </div>
-              <div className="grid grid-cols-4 gap-8">
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-3">Picture</h4>
-                  <div className="relative aspect-square rounded-lg overflow-hidden">
-                    <Image
-                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
-                      alt="Defect photo"
-                      fill
-                      className="object-cover bg-muted/50"
-                    />
+              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Railings, Guards & Handrails
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-primary flex items-center gap-2 font-bold">Missing handrail</h3>
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-red-800 flex items-center gap-2 font-bold">Major Defect</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col">
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Description</h4>
+                    <div className="text-base text-primary">I observed a missing handrail. </div>
+                    <h4 className="text-sm font-light text-red-800/60 pt-2">Recommendations</h4>
+                    <div className="text-base text-primary">There is more than one step here, and I recommend installing a handrail for safety. </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Description</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Likely Cause</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Severity</h4>
-                  <div className="pb-4">
-                    <div className="inline-flex items-center gap-2 bg-yellow-800 rounded-lg py-2 px-4 text-sm text-white">
-                      Marginal Defects
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-22.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
+                    
                   </div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Recommendations</h4>
-                  <p>Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
                 </div>
               </div>
-            </div>
             
           </div>
 
-          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2 pt-4">Structural Components</h2>
-          <div className="flex flex-col gap-2">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-lg font-medium text-secondary py-4">Systems Check</h3>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
-                </div>
-                Foundation
-              </div>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
-                </div>
-                Basement and Crawlspace
-              </div>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
-                </div>
-                Attic and Roof Framing
-              </div>
-            </div>
-            
-          </div>
-
-          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2">Electrical Systems</h2>
-          <div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-lg font-medium text-secondary py-4">Systems Check</h3>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
-                </div>
-                Service Entrance and Panels
-              </div>
-              <div className="flex items-center gap-4 text-primary">
-                <div className="inline-flex items-center gap-2 bg-accent-foreground rounded-lg py-2 px-4 text-sm text-primary">
-                  <CircleCheck className="w-4 h-4 text-primary" /> Inspected
-                </div>
-                Branch Circuits, Connected Devices and Fixtures
-              </div>
-            </div>
-            
-            
-          </div>
-          <div className="">
-            <div>
-              <h3 className="text-lg font-medium text-secondary my-4">Defects</h3>
-              <div className="bg-yellow-300/25 rounded-lg px-8 pt-6 pb-8">
-              <div className="flex items-center gap-4 pb-4">
-                <h5 className="text-base text-yellow-800">Doors and Windows</h5>
-                <MoveRight className="w-4 h-4 text-yellow-800" />
-                <h3 className="text-base font-bold text-yellow-800">Retaining Walls</h3>
-              </div>
-              <div className="grid grid-cols-4 gap-8">
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-3">Picture</h4>
-                  <div className="relative aspect-square rounded-lg overflow-hidden">
-                    <Image
-                      src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-1.jpg`}
-                      alt="Defect photo"
-                      fill
-                      className="object-cover bg-muted/50"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Description</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Likely Cause</h4>
-                  <p>Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. Description text about something on this page that can be long or short. </p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Severity</h4>
-                  <div className="pb-4">
-                    <div className="inline-flex items-center gap-2 bg-yellow-800 rounded-lg py-2 px-4 text-sm text-white">
-                      Marginal Defects
-                    </div>
-                  </div>
-                  <h4 className="text-sm font-light text-yellow-800/60 pb-2">Recommendations</h4>
-                  <p>Description text about something on this page that can be long or short.  Description text about something on this page that can be long or short.</p>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
+          
           
         </div>
       </SidebarInset>
