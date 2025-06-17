@@ -57,8 +57,9 @@ export default function Page() {
                 </div>
               </div>
               <div className="">
-                <h1 className="text-lg font-bold text-primary h-[36px] flex items-center">Travis Page</h1>
-                <p className="text-primary-foreground/50 text-sm flex items-center gap-2"><BadgeCheck className="w-4 h-4 text-accent" /> Certified Inspector</p>
+                <h1 className="text-lg font-bold text-primary flex items-center leading-6">Travis Page</h1>
+                <p className="text-primary text-sm flex items-center gap-2">Certified Inspector</p>
+                <p className="text-primary-foreground/50 text-sm flex items-center gap-2">Agent: <b>Ann Paris</b></p>
               </div>
               
             </div>
@@ -87,7 +88,28 @@ export default function Page() {
               <h3 className="text-primary-foreground/50 text-sm text-right">Generate PDF Report</h3>
             </div>
           </div>
+          
           <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2">General Overview</h2>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="flex flex-col items-center justify-center gap-2">
+              <div className="flex w-full flex-col items-center gap-2 bg-secondary/25 rounded-xl py-6 px-6">
+                <div className="text-primary text-xl font-bold">69</div>
+                <div className="text-primary-foreground/50 text-sm">Items Inspected</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2">
+              <div className="flex w-full flex-col items-center gap-2 bg-blue-300/25 rounded-xl py-6 px-6">
+                <div className="text-blue-800 text-xl font-bold">7</div>
+                <div className="text-blue-800/50 text-sm">Minor Defects</div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2">
+              <div className="flex w-full flex-col items-center gap-2 bg-red-300/25 rounded-xl py-6 px-6">
+                <div className="text-red-800 text-xl font-bold">8</div>
+                <div className="text-red-800/50 text-sm">Major Defects</div>
+              </div>
+            </div>
+          </div>
           <div>
             <h3 className="text-lg font-medium text-secondary my-4">Pictures</h3>
             <div className="grid auto-rows-min gap-4 md:grid-cols-3">
