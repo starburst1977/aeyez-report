@@ -93,19 +93,19 @@ export default function Page() {
           <div className="grid grid-cols-3 gap-4">
             <div className="flex flex-col items-center justify-center gap-2">
               <div className="flex w-full flex-col items-center gap-2 bg-secondary/25 rounded-xl py-6 px-6">
-                <div className="text-primary text-xl font-bold">69</div>
+                <div className="text-primary text-2xl font-bold">69</div>
                 <div className="text-primary-foreground/50 text-sm">Items Inspected</div>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
               <div className="flex w-full flex-col items-center gap-2 bg-blue-300/25 rounded-xl py-6 px-6">
-                <div className="text-blue-800 text-xl font-bold">7</div>
+                <div className="text-blue-800 text-2xl font-bold">7</div>
                 <div className="text-blue-800/50 text-sm">Minor Defects</div>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-2">
               <div className="flex w-full flex-col items-center gap-2 bg-red-300/25 rounded-xl py-6 px-6">
-                <div className="text-red-800 text-xl font-bold">8</div>
+                <div className="text-red-800 text-2xl font-bold">8</div>
                 <div className="text-red-800/50 text-sm">Major Defects</div>
               </div>
             </div>
