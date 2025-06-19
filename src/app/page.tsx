@@ -223,7 +223,7 @@ export default function Page() {
                   
                   <div className="flex flex-col gap-4">
                     <div className="text-base text-muted">I inspected the eaves, soffits and fascia.  I was not able to inspect every detail, since a home inspection is limited in its scope.</div>
-                    <div className="text-base text-muted"><b>Limitation:</b> I did not inspect all of the eaves, soffit, and facia.  It&apos;s impossible to inspect those areas closely during a home inspection.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the eaves, soffit, and fascia.</div>
+                    
                   </div>
                   <div className="flex gap-4 h-24">
                     <div className="relative aspect-3/2 rounded-lg overflow-hidden">
@@ -248,7 +248,7 @@ export default function Page() {
                   
                   <div className="flex flex-col gap-4">
                     <div className="text-base text-muted">The exterior of your home is slowly deteriorating and aging.  The sun, wind, rain and temperatures are constantly affecting it.  Your job is to monitor the house&apos;s exterior for its condition and weathertightness. </div>
-                    <div className="text-base text-muted"><b>Limitation:</b> I did not inspect all of the exterior wall-covering material.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the exterior wall-covering.</div>
+                    
                   </div>
                   <div className="flex gap-4 h-24">
                     <div className="relative aspect-3/2 rounded-lg overflow-hidden">
@@ -308,7 +308,7 @@ export default function Page() {
                   <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspected</h3>
                 </div>
                 <p className="text-base text-muted">I inspected ground-fault circuit interrupter receptacles and circuit breakers observed and deemed to be GFCIs using a GFCI tester, where possible.</p>
-                <div className="text-base text-muted"><b>Limitation:</b> I was unable to inspect every electrical component or proper installation of the GFCI system according to modern code. A licensed electrician or township building code inspector could perform that type of test, which is beyond the scope of my visual-only home inspection. I inspected the electrical system as much as I could according to the Home Inspection Standards of Practice.</div>
+                
               </div>
               <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
                 <div className="flex items-center gap-4 text-primary">
@@ -410,7 +410,7 @@ export default function Page() {
           </div>
           <div className="">
             <div className="flex flex-col gap-4">
-              <h3 className="text-lg font-medium text-secondary my-4">Defects</h3>
+              <h3 className="text-lg font-medium text-red-800 my-4">Defects</h3>
               <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary">
                 <div className="flex items-center gap-4 text-primary">
                   Eaves, Soffits & Fascia
@@ -537,6 +537,44 @@ export default function Page() {
                       />
                     </div>
                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-lg font-medium text-primary py-4">Limitations</h3>
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  GFCIs & Electrical
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Inspection Was Restricted</h3>
+                </div>
+                
+                <div className="text-base text-muted">I was unable to inspect every electrical component or proper installation of the GFCI system according to modern code. A licensed electrician or township building code inspector could perform that type of test, which is beyond the scope of my visual-only home inspection. I inspected the electrical system as much as I could according to the Home Inspection Standards of Practice.</div>
+              </div>
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+                <div className="flex items-center gap-4 text-primary">
+                  Wall-Covering, Flashing & Trim
+                  <MoveRight className="w-4 h-4 text-primary" />
+                  <h3 className=" text-green-800 flex items-center gap-2 font-bold">Unable to Inspect Everything</h3>
+                </div>
+                <div className="flex flex-col gap-4">
+                  
+                  <div className="flex flex-col gap-4">
+                    
+                    <div className="text-base text-muted">I did not inspect all of the exterior wall-covering material.  A home inspection is not an exhaustive evaluation.  My inspection of the exterior was limited.  I did not reach and access closely every part of the exterior wall-covering.</div>
+                  </div>
+                  <div className="flex gap-4 h-24">
+                    <div className="relative aspect-3/2 rounded-lg overflow-hidden">
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/house-5.jpg`}
+                        alt="Defect photo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
