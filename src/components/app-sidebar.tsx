@@ -1,6 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
-
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import {
   Sidebar,
   SidebarContent,
@@ -239,12 +240,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <Tabs defaultValue="complete" className="w-full">
-            <TabsList className="">
-              <TabsTrigger value="complete">Complete</TabsTrigger>
-              <TabsTrigger value="password">Summary</TabsTrigger>
-            </TabsList>
-            <TabsContent value="complete">
+          <div className="inline-flex items-center gap-2 py-8 px-2">
+            <Button variant="outline" className="text-white bg-primary border-0 hover:bg-primary-foreground">Complete</Button>
+            <Button variant="secondary" className="text-muted bg-secondary-foreground border-0 hover:bg-secondary/50" asChild>
+              <Link href="/summary">Summary</Link>
+            </Button>
+          </div>
+          <div>
             <SidebarMenu className="gap-2">
               {data.navMain.map((item) => (
                 <SidebarMenuItem key={item.title}>
@@ -267,10 +269,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
-            </TabsContent>
-            <TabsContent value="password">Alternative content</TabsContent>
-          </Tabs>
-          
+          </div>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
