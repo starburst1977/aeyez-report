@@ -15,82 +15,47 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import Link from "next/link"
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar"
 
 export default function Page() {
   return (
-    <SidebarProvider
-      style={
-        {
-          "--sidebar-width": "19rem",
-        } as React.CSSProperties
-      }
-    >
-      <AppSidebar />
-      <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 px-8  w-full max-w-7xl mx-auto">
-          <SidebarTrigger className="-ml-1" />
+    <div className="report-page">
+        <header className="flex justify-between items-center gap-2 px-8  w-full max-w-7xl mx-auto">
+          <div className="flex items-center gap-6 justify-start">
+            <div className="flex items-center gap-2">
+              <div className="relative rounded-lg size-16 overflow-hidden">
+                <Image
+                  src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/user.jpg`}
+                  alt="User profile"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="">
+              <h1 className="text-lg font-bold text-primary flex items-center leading-6">Travis Page</h1>
+              <p className="text-primary text-sm flex items-center">Certified Inspector</p>
+              <p className="text-primary-foreground/50 text-sm flex items-center gap-2">Agent: <b>Ann Paris</b></p>
+            </div>
+          </div>
+          <div className="py-4 flex flex-col items-end justify-center">
+            <div className="">
+              <div className="text-primary text-base font-bold leading-6">Standard Report</div>
+            </div>
+            <h3 className="text-primary-foreground/50 text-sm text-right">Generate PDF Report</h3>
+          </div>
           
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbPage>Inspection Report for Tyler Durden</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
         </header>
         <div className="flex flex-1 flex-col gap-4 pt-4 pb-16 px-8 w-full max-w-7xl mx-auto pt-0">
-          <div className="grid grid-cols-3 gap-2">
-            <div className="flex items-center gap-6 justify-start">
-              <div className="flex items-center gap-2">
-                <div className="relative rounded-lg size-16 overflow-hidden">
-                  <Image
-                    src={`${process.env.NODE_ENV === 'production' ? '/aeyez-report' : ''}/user.jpg`}
-                    alt="User profile"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="">
-                <h1 className="text-lg font-bold text-primary flex items-center leading-6">Travis Page</h1>
-                <p className="text-primary text-sm flex items-center gap-2">Certified Inspector</p>
-                <p className="text-primary-foreground/50 text-sm flex items-center gap-2">Agent: <b>Ann Paris</b></p>
-              </div>
-              
-            </div>
+          <div className="">
+            
             <div className="py-4 flex flex-col items-center justify-center">
               <h1 className="text-[2.5rem] font-light text-primary">525 S State St</h1>
               <p className="text-accent font-medium text-xl">Ann Arbor, MI 48109</p>
             </div>
             
-            <div className="py-4 flex flex-col items-end gap-1 justify-center">
-              
-              <div className="flex items-center gap-2">
-                <Select>
-                  <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Type of Report" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="light">Light</SelectItem>
-                    <SelectItem value="dark">Dark</SelectItem>
-                    <SelectItem value="system">System</SelectItem>
-                  </SelectContent>
-                </Select>
-                <Button variant="outline" size="icon">
-                  <Link href="/report"><FileText className="w-4 h-4" /></Link>
-                </Button>
-              </div>
-              <h3 className="text-primary-foreground/50 text-sm text-right">Generate PDF Report</h3>
-            </div>
           </div>
           
-          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2">General Overview</h2>
+          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2 section-break">General Overview</h2>
           <div className="grid grid-cols-3 gap-4">
             <div className="flex flex-col items-center justify-center gap-2">
               <div className="flex w-full flex-col items-center gap-2 bg-secondary/25 rounded-xl py-6 px-6">
@@ -140,8 +105,8 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div>
+          <div className="grid grid-cols-3 gap-4 break-inside-avoid">
+            <div className="property-details">
               <h3 className="text-lg font-medium text-secondary my-4">Property Details</h3>
               <div className="">
                 <p><b>Property Type:</b> Single Family Residence</p>
@@ -153,14 +118,14 @@ export default function Page() {
                 <p><b>Garage Size:</b> 200 sq. ft.</p>
               </div>
             </div>
-            <div>
+            <div className="property-details">
               <h3 className="text-lg font-medium text-secondary my-4">Inspection Date & Time</h3>
               <div className="">
                 <p><b>Date:</b> 10.06.2025</p>
                 <p><b>Time:</b> 10:00 AM</p>
               </div>
             </div>
-            <div>
+            <div className="property-details">
               <h3 className="text-lg font-medium text-secondary my-4">Client Information</h3>
               <div className="">
                 <p><b>Name:</b> Tyler Durden</p>
@@ -169,7 +134,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 break-inside-avoid">
             <div>
               <h3 className="text-lg font-medium text-secondary my-4">Weather Conditions</h3>
               <div className="">
@@ -187,18 +152,16 @@ export default function Page() {
             </div>
           </div>
           
-          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2">Exterior Inspection</h2>
+          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2 section-break">Exterior Inspection</h2>
           <h3 className="text-lg font-medium text-secondary">Homeowner&apos;s Responsibility</h3>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="break-inside-avoid">
               
-              <p className="text-xs text-muted">The exterior of your home is slowly deteriorating and aging. The sun, wind, rain and temperatures are constantly affecting it. Your job is to monitor the buildings exterior for its condition and weathertightness. Check the condition of all exterior materials and look for developing patterns of damage or deterioration. </p>
-              <p className="text-xs text-muted">During a heavy rainstorm (without lightning), grab an umbrella and go outside. Walk around your house and look around at the roof and property. A rainstorm is the perfect time to see how the roof, downspouts and grading are performing. Observe the drainage patterns of your entire property, as well as the property of your neighbor. </p>
-              <p className="text-xs text-muted"> The ground around your house should slope away from all sides. Downspouts, surface gutters and drains should be directing water away from the foundation. </p>
+              <p className="text-xs text-muted">The exterior of your home is slowly deteriorating and aging. The sun, wind, rain and temperatures are constantly affecting it. Your job is to monitor the buildings exterior for its condition and weathertightness. Check the condition of all exterior materials and look for developing patterns of damage or deterioration. During a heavy rainstorm (without lightning), grab an umbrella and go outside. Walk around your house and look around at the roof and property. A rainstorm is the perfect time to see how the roof, downspouts and grading are performing. Observe the drainage patterns of your entire property, as well as the property of your neighbor. The ground around your house should slope away from all sides. Downspouts, surface gutters and drains should be directing water away from the foundation. </p>
           </div>
           <div>
             <div className="flex flex-col gap-2">
               <h3 className="text-lg font-medium text-secondary py-4">Systems Check</h3>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                   General
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -206,7 +169,7 @@ export default function Page() {
                 </div>
                 <p className="text-base text-muted">I inspected the exterior of the house.</p>
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                   Exterior Doors and Windows
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -214,7 +177,7 @@ export default function Page() {
                 </div>
                 <p className="text-base text-muted">I inspected the exterior doors.</p>
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                   Eaves, Soffits & Fascia
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -239,7 +202,7 @@ export default function Page() {
                 </div>
                 
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                   Wall-Covering, Flashing & Trim
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -263,7 +226,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                   Vegetation, Surface Drainage, Retaining Walls & Grading
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -302,7 +265,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                   GFCIs & Electrical
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -311,7 +274,7 @@ export default function Page() {
                 <p className="text-base text-muted">I inspected ground-fault circuit interrupter receptacles and circuit breakers observed and deemed to be GFCIs using a GFCI tester, where possible.</p>
                 
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                 Walkways & Driveways
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -350,7 +313,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary keep-together">
                 <div className="flex items-center gap-4 text-primary">
                   Porches, Patios, Decks, Balconies & Carports
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -412,7 +375,7 @@ export default function Page() {
           <div className="">
             <div className="flex flex-col gap-4">
               <h3 className="text-lg font-medium text-red-800 my-4">Defects</h3>
-              <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary defect-item">
                 <div className="flex items-center gap-4 text-primary">
                   Eaves, Soffits & Fascia
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -440,7 +403,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-blue-300/25 rounded-lg py-4 px-6 text-primary defect-item">
                 <div className="flex items-center gap-4 text-primary">
                   Wall-Covering, Flashing & Trim
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -468,7 +431,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary defect-item">
                 <div className="flex items-center gap-4 text-primary">
                   GFCIs & Electrical
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -512,7 +475,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-red-300/25 rounded-lg py-4 px-6 text-primary defect-item">
                 <div className="flex items-center gap-4 text-primary">
                   Railings, Guards & Handrails
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -546,7 +509,7 @@ export default function Page() {
           <div>
             <div className="flex flex-col gap-2">
               <h3 className="text-lg font-medium text-primary py-4">Limitations</h3>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary break-inside-avoid-page">
                 <div className="flex items-center gap-4 text-primary">
                   GFCIs & Electrical
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -555,7 +518,7 @@ export default function Page() {
                 
                 <div className="text-base text-muted">I was unable to inspect every electrical component or proper installation of the GFCI system according to modern code. A licensed electrician or township building code inspector could perform that type of test, which is beyond the scope of my visual-only home inspection. I inspected the electrical system as much as I could according to the Home Inspection Standards of Practice.</div>
               </div>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary break-inside-avoid-page">
                 <div className="flex items-center gap-4 text-primary">
                   Wall-Covering, Flashing & Trim
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -582,11 +545,11 @@ export default function Page() {
             </div>
           </div>
 
-          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2 pt-4">Interior Inspection</h2>
+          <h2 className="text-lg font-bold text-accent mt-8 border-b border-secondary/50 pb-2 section-break">Interior Inspection</h2>
           <div className="">
             <div>
               <h3 className="text-lg font-medium text-secondary my-4">Systems Check</h3>
-              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary">
+              <div className="flex flex-col gap-2 bg-secondary/25 rounded-lg py-4 px-6 text-primary break-inside-avoid-page">
                 <div className="flex items-center gap-4 text-primary">
                   Eaves, Soffits & Fascia
                   <MoveRight className="w-4 h-4 text-primary" />
@@ -723,7 +686,6 @@ export default function Page() {
           
           
         </div>
-      </SidebarInset>
-    </SidebarProvider>
+    </div>
   )
 }
